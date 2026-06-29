@@ -1,0 +1,9 @@
+[project]
+name = "ml-trainer"
+version = "0.3.0"
+requires-python = ">=3.11"
+
+[project.scripts]
+train = "ml_trainer.cli:train"
+evaluate = "ml_trainer.cli:evaluate"
+serve = "ml_trainer.api:main"

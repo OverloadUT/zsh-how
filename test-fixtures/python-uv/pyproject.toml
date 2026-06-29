@@ -1,0 +1,13 @@
+[project]
+name = "data-pipeline"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+[project.scripts]
+serve = "data_pipeline.server:main"
+migrate = "data_pipeline.db:run_migrations"
+seed = "data_pipeline.db:seed_data"
+
+[tool.uv.scripts]
+check = "ruff check ."
+fmt = "ruff format ."

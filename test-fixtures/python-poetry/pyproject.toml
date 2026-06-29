@@ -1,0 +1,11 @@
+[tool.poetry]
+name = "blog-engine"
+version = "0.2.0"
+description = "A static blog generator"
+
+[tool.poetry.scripts]
+generate = "blog_engine.cli:generate"
+preview = "blog_engine.cli:preview"
+
+[project.scripts]
+blog = "blog_engine.main:run"

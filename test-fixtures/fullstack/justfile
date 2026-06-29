@@ -1,0 +1,21 @@
+# Fullstack app orchestration
+
+# Start everything for local dev
+dev:
+    docker compose up -d db redis
+    npm run dev
+
+# Run the full test suite
+test:
+    npm run test
+
+# Build and push Docker image
+release tag:
+    docker build -t myapp:{{tag}} .
+    docker push myapp:{{tag}}
+
+# Reset the local database
+db-reset:
+    docker compose down db
+    docker compose up -d db
+    npm run db:migrate

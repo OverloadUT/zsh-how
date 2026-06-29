@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - redis
+  db:
+    image: postgres:16
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: fullstack
+      POSTGRES_PASSWORD: localdev
+  redis:
+    image: redis:7-alpine
+
+volumes:
+  pgdata:

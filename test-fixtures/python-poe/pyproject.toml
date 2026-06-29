@@ -1,0 +1,11 @@
+[project]
+name = "poe-fixture"
+version = "0.1.0"
+
+[dependency-groups]
+dev = ["poethepoet>=0.29"]
+
+[tool.poe.tasks]
+serve = { cmd = "python app.py", help = "Run the dev server" }
+lint = "ruff check ."
+release = ["lint", "serve"]

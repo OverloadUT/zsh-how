@@ -1,0 +1,24 @@
+# A sample web project
+
+# Run the dev server
+dev:
+    echo "Starting dev server..."
+
+# Run all tests
+test:
+    echo "Running tests..."
+
+# Build for production
+build:
+    echo "Building..."
+
+# Lint and format code
+lint:
+    echo "Linting..."
+
+# Deploy to staging
+deploy-staging:
+    echo "Deploying to staging..."
+
+clean:
+    echo "Cleaning up..."

@@ -1,0 +1,21 @@
+[package]
+name = "my-cli-tool"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "cli"
+path = "src/cli.rs"
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "migrate"
+path = "src/migrate.rs"
+
+[dependencies]
+clap = "4.4"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
