@@ -3,6 +3,7 @@
 A `how` command that tells you how to run the project in the current directory. Run `how` and it detects the project files (justfile, package.json, pyproject.toml, Cargo.toml, go.mod, Makefile, Docker) and prints the available commands and scripts.
 
 ```
+~/> how
 ▸ Node  (package.json → pnpm)
   pnpm run dev                 next dev
   pnpm run build               next build
